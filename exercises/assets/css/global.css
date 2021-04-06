@@ -20,6 +20,7 @@ input, button, textarea, select { font: inherit }
 body { 
     text-align: center;
     font-family: sans-serif;
+    background-color: #140d07;
 }
 
 h1 {
@@ -28,7 +29,6 @@ h1 {
     letter-spacing: -2px;
     margin-bottom: 12px;
     line-height: 1.2;
-    background-color: #140d07;
 }
 
 h2 {
