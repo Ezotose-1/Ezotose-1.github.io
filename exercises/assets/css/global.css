@@ -50,4 +50,10 @@ h3 {
 p {
     font-size: 20px;
     margin-bottom: 16px;
+    text-decoration: none;
+    color : lightgray;
+}
+p.hover {
+    color : white;
+    font-weight : bold;
 }
