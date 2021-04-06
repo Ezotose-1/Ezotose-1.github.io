@@ -24,6 +24,10 @@ body {
     color : white;
 }
 
+img {
+  border-radius: 50%;
+}
+
 h1 {
     font-size: 78px;
     font-weight: normal;
