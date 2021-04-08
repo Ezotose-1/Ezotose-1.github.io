@@ -103,9 +103,9 @@ a:hover {
   background-color: antiquewhite;
   color: #222;
   margin-bottom: 30px;
+  margin-top: -50px;
 }
 
-<<<<<<< HEAD
 /*  ============= WEB BROWSER RESETS ============ */
 * { margin: 0; padding: 0; border: none }
 *, *::before, *::after { box-sizing: border-box }
@@ -182,16 +182,3 @@ header *:last-child, section *:last-child { margin-bottom: 0 }
 
 /* =============== UTILTY CLASSES ============== */
 .text-center { text-align: center !important }
-=======
-.animate-spawn{
-    position:relative;
-    animation:animateSpawn 5s;
-  } @keyframes animateSpawn{
-    0%{
-      opacity:0
-    }
-    100%{
-      opacity:1
-    }
-  }
->>>>>>> main
