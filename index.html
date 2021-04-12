@@ -1,21 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pierre Blaess | Home Page</title>
-    <meta name="description" content="Welcome to my website that showcases some of my digital creations.">
-    <link rel="stylesheet" href="exercises/assets/css/global.css">  
+    <title>Hero Block: With full-width backgound image</title>
+    <link rel="stylesheet" href="assets/css/hero-img.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<section class="section-narrow head-bar-color">
-    <h1>Hi, I'm Pierre !</h1>  
 
-    <h2>Web / UI Designer</h2>
-</section>
-    
+<!-- hero block -->
+<header class="hero-block text-center">
+    <div class="hero-text-container bg-text animate-spawn">
+        <h1>Pierre Blaess</h1>
+        <h2>Front-end and C# Developer</h2>
+    </div>
+    <div class="hero-img">
+        <img src="assets/img/prog.jpg" alt="Hook Head">
+    </div>
+    <div class="bg-overlay"></div>
+</header>
+<!-- /hero block -->
+
+
+<section>
     <p>I created this website to showcase some of my recent web design work.</p>  
 
     <h3>Really increadible Web Pages</h3>
@@ -27,7 +39,12 @@
     <p><a href="exercises/page-6.html">Ireland's Top Five Visitor Attractions</a></p>
     <p><a href="exercises/page-12.html">Flex box</a></p>
 
-    <img class="animate-spawn" src="exercises/assets/img/cheers.jpg" alt="Cheers !"> 
+</section>
+<!-- hero block -->
+<section class="end-block text-center" style="background-color: #3B1E00;">
+    <img class="animate-spawn cheer" src="exercises/assets/img/cheers.jpg" alt="Cheers !"> 
+</section>
+<!-- /hero block -->
 
 </body>
 </html>
