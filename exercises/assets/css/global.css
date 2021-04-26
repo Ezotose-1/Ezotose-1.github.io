@@ -18,11 +18,11 @@ input, button, textarea, select { font: inherit }
 @media (max-width: 767px) { body { padding: 12% 8% } }
 
 body { 
-    text-align: center;
-    font-family: sans-serif;
-    background-color: #3B1E00;
-    color : white;
-    font-family: 'Fjalla One', sans-serif;
+  font-family: sans-serif;
+  background-color: #3B1E00;
+  color : white;
+  text-align: center;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 img {
@@ -182,3 +182,7 @@ header *:last-child, section *:last-child { margin-bottom: 0 }
 
 /* =============== UTILTY CLASSES ============== */
 .text-center { text-align: center !important }
+
+.link {
+  border-bottom: 1px solid lightblue;
+}

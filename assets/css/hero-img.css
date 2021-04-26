@@ -248,3 +248,18 @@ h3 {
     line-height: 1.2;
     text-transform: uppercase;
 }
+
+section h3 {
+    margin-top: 0;
+}
+
+.dark-section {
+    background-color: #3B1E00;
+    color: #fdfff5;
+}
+.dark-section a {
+        color: #fdfff5dc;
+}
+.dark-section a:hover {
+    color: #fdfff59f;
+}
