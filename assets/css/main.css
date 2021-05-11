@@ -1,9 +1,14 @@
 
 /* Default font and colours */
-h1, h2, h3 { color: #fff}
-p, li { color: #fff }
-.bg-light-slate { background-color: #515e7b }
-.bg-pastel-grey { background-color: #edf5f1 }
+.bg-light-slate {
+    background-color: #3B1E00;
+    color: #fff;
+}
+
+.bg-pastel-grey {
+    background-color: #edc3a5;
+    color: #3B1E00
+}
 
 
 /* ==== CONTAINER FOR SINGLE COLUMN OF CONTENT ==== */
@@ -67,21 +72,20 @@ a.button-solid:link, .button-solid:visited {
 } 
  
 a.button-solid:hover, .button-solid:active {
-    border-color:#183153;
-    background-color: #183153;
-    color: #fff
+    border-color:#edc3a5;
+    background-color: #edc3a5;
+    color: #3B1E00
 }
  
 a.button-ghost:link, a.button-ghost:visited {
     border-color: #403d50;
     background-color: transparent;
-    color: #403d50
 } 
  
 a.button-ghost:hover, .button-ghost:active {
     border-color: #403d50;
     background-color: #403d50;
-    color: #fff
+    color: #3B1E00
 }
  
 a.button-soft { border-radius: 5px }
@@ -105,12 +109,10 @@ a.fancy-link:hover, a.fancy-link:active {
 }
 
 a.fancy-link:link, a.fancy-link:visited { 
-    color: #34cdf1; 
     border-bottom-color:#34cdf1
 }
 
 a.fancy-link:hover, a.fancy-link:active { 
-    color: #fff; 
     border-bottom-color: #fff
 }
 
@@ -209,7 +211,6 @@ img.image-circle {
 }
 
 .container-flexbox .item-1 h2 {
-    color: #34cdf1;
     line-height: 1.2; margin-bottom: 20px;
     letter-spacing:-1px;
     font-weight: 600;
@@ -219,7 +220,6 @@ img.image-circle {
 .container-flexbox .item-1 p {
     line-height: 1.7;
     font-size: calc(18px + (26 - 18) * ((100vw - 320px)/(1600 - 320)));
-    color: #fff;
 }
 
 @media all and (max-width:767px) {
@@ -231,13 +231,11 @@ img.image-circle {
 .container-flexbox .item-3 p {
     line-height: 1.5; margin-bottom: 40px;
     font-size: calc(16px + (18 - 16) * ((100vw - 320px)/(1600 - 320)));
-    color: #fff;
 }
 
 .container-flexbox .item-2 h3,
 .container-flexbox .item-3 h3 {
     line-height: 1.2; margin-bottom: 12px;
-    color:#34cdf1
 }
 
 /* Centre-align text within two, three and four columns on mobiles */
@@ -272,8 +270,9 @@ img.image-circle {
 
 /* All screens */
 .container-contact-form { 
+    color: #3B1E00;
 	text-align: center; 
-	background-color: #183153
+	background-color: #edc3a5
 }
 
 /* Desktop */
@@ -297,7 +296,6 @@ img.image-circle {
 /* Heading */
 .container-contact-form h3 { 
 	font-weight: bold; 
-	color: #fff;
 	line-height: 1.2;
 	margin-bottom: 3%;
 	font-size: calc(30px + (64 - 30) * ((100vw - 320px) / (1600 - 320))); 
@@ -305,8 +303,7 @@ img.image-circle {
 
 /* Text */
 .container-contact-form p { 
-    font-weight: normal;
-    color: #fff; 
+    font-weight: normal; 
 	line-height: 1.5;
 	margin-bottom: 7%;
 	font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1600 - 320))); 
@@ -332,7 +329,7 @@ img.image-circle {
 
 #contact-form label, #contact-form input, #contact-form textarea {
     font-family: 'Poppins', sans-serif;
-	color: #fff;
+	bg-light-slate text-light
 	display: block;
 }
 
@@ -372,21 +369,19 @@ img.image-circle {
 
 #contact-form #btn-submit { 
 	float: right; 
-	border: none; 
-    color: #000;
+	border: 1px solid; 
+    color: #fff;
 	font-weight: bold;
     padding: 18px 28px;
     font-size: 18px;
-    border-color:#34cdf1;
-    color: #000;
-    background-color: #34cdf1;
+    border-color:#fff;;
+    background-color: #3B1E00;
 }
 
 
 #contact-form #btn-submit:hover, 
 #contact-form #btn-submit:active { 
     background-color: red;
-    color: #fff
 }
 
 #contact-form #btn-submit i.fas {

@@ -266,7 +266,7 @@
 
 /* background colour */
 .menu-dark { 
-	background-color: #183153; 
+	background-color: #3B1E00;
 	transition: all .5s ease-in-out
 }
 
@@ -323,7 +323,7 @@ a[href^=tel] { text-decoration: none; color: #fff }
 .menu-dark.flyout-menu .fly-out-social-icons a i { color:#fff }
 
 .menu-dark ul li .btn-cta:any-link {
-    border-color: #183153 !important;
+    border-color: #edc3a5 !important;
     background-image: linear-gradient(to right,#3ec7e0,#526bf4); color: #fff !important;   
 } 
 
