@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>structure_algebrique</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="structure-algébrique">Structure algébrique</h1>
+<p><em>(cours pas très synthétique mais au moins il est complet…)</em></p>
+<h3 id="définition-">Définition :</h3>
+<p>Structure algébrique → Abstraction des structures de calcul standard</p>
+<p>Au programme ⇒ Anneaux factoriels<br>
+⇒ Algèbre linéaire sur des espaces vectoriels<br>
+⇒ Groupes et symétrie</p>
+<h2 id="arithmétique">Arithmétique</h2>
+<p>Faire de l’arithmétique ⇒ étudier les relations de divisibilité entre les entiers</p>
+<p>Rêgles particulières : <code>1 divise tous les entiers</code>, <code>0 est divisable par tous les entiers</code>, <code>les nombres premiers ne se divise qu'eux même</code>, etc…</p>
+<h3 id="definition-division-sur-z-">Definition division sur Z :</h3>
+<p>On dit que k <em>(entier)</em>  divise n <em>(entier)</em> s’il existe l <em>(entier)</em> tel que :<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>m</mi><mo>=</mo><mi>k</mi><mo>×</mo><mi>l</mi></mrow><annotation encoding="application/x-tex">
+m = k × l
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.77777em; vertical-align: -0.08333em;"></span><span style="margin-right: 0.03148em;" class="mord mathnormal">k</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span style="margin-right: 0.01968em;" class="mord mathnormal">l</span></span></span></span></span></span> ⇒ La notion de divisibilité est relié à une multiplication.</p>
+<p>Une division est <strong>une relation d’ordre :</strong><br>
+un élément peut se diviser lui même car :<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>m</mi><mo>=</mo><mi>m</mi><mo>×</mo><mi>l</mi><mspace linebreak="newline"></mspace><mi>l</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">
+m = m × l \\ 
+l = 1
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span style="margin-right: 0.01968em;" class="mord mathnormal">l</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span style="margin-right: 0.01968em;" class="mord mathnormal">l</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span></span></span></span></span></span></p>
+<h3 id="généralisons-">Généralisons :</h3>
+<p>On note l’ensemble A. Pour faire de l’arithmétique sur A il nous faut :</p>
+<ul>
+<li>Avoir les opérateurs + et ×</li>
+<li>On note ‘1’ l’élément qui assure 1 × a = a = a × 1</li>
+<li>Dire que a(b + c) = ab + ac</li>
+</ul>
+<h2 id="notion-danneau">Notion d’anneau</h2>
+<p>Un anneau est un triplet <strong>(A, +, ×)</strong> <em>(× ou •)</em> composé de</p>
+<ul>
+<li>Un ensemble A composé de deux éléments neutre : 0 pour + et 1 pour ×</li>
+<li>Deux opérations binaires allant de <strong>A vers A</strong> tel quel<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mo>+</mo><mi>A</mi><mo>→</mo><mi>A</mi><mspace linebreak="newline"></mspace><mi>A</mi><mo>×</mo><mi>A</mi><mo>→</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">
+  A + A → A \\
+  A × A → A
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.76666em; vertical-align: -0.08333em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathnormal">A</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height: 0.76666em; vertical-align: -0.08333em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathnormal">A</span></span></span></span></span></span> appelé <em>addition</em> et <em>multiplication</em>.</li>
+<li>Des axiomes qui satisfont l’addition :
+<ul>
+<li>associativité : <em>a + (b + c) = (a + b) + c</em></li>
+<li>élément neutre : <em>a + 0 = a</em></li>
+<li>inversibilité : <em>a + (-a) = (-a) + a</em></li>
+<li>commutativité : <em>a + b = b + a</em></li>
+</ul>
+</li>
+<li>Des axiomes pour la multiplication :
+<ul>
+<li>associativité : <em>a × (b × c) = (a × b) × c</em></li>
+<li>élément neutre : <em>a × 1 = a</em></li>
+</ul>
+</li>
+<li>Distributivité gauche : <em>a × (b + c) = a × b + a × c</em></li>
+<li>Distributivité droite : <em>(b + c) × a = b × a + c × a</em></li>
+</ul>
+<p>Un anneau est <strong>commutatif</strong> s’il satisfait pour tout a, b de A<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>a</mi><mo>×</mo><mi>b</mi><mo>=</mo><mi>b</mi><mo>×</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">
+a × b = b × a
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.77777em; vertical-align: -0.08333em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">a</span></span></span></span></span></span></p>
+<h3 id="exemples-danneaux-">Exemples d’anneaux :</h3>
+<p>Classiquement Z, R, C avec × le produit * et + l’addition classique. Les polynômes ou fonctions numériques. Les matrices.</p>
+<h2 id="notion-d’intégrité">Notion d’intégrité</h2>
+<p>On définit A un anneau intègre s’il est commutatif et si toute relation du type ab = 0 pour deux éléments de A, implique a = 0 ou b = 0.<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">∀</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>∈</mo><mi>A</mi><mtext>²</mtext><mo separator="true">,</mo><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi>a</mi><mo>×</mo><mi>b</mi><mo>=</mo><mn>0</mn><mo stretchy="false">)</mo><mo>⇒</mo><mo stretchy="false">(</mo><mi>a</mi><mo>=</mo><mn>0</mn><mtext>&nbsp;</mtext><mi>o</mi><mi>u</mi><mtext>&nbsp;</mtext><mi>b</mi><mo>=</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">
+\forall  (a, b) \in A², \\
+(a × b = 0) ⇒ (a = 0 \ ou \ b = 0 )
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">∀</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.87777em; vertical-align: -0.19444em;"></span><span class="mord mathnormal">A</span><span class="mord">²</span><span class="mpunct">,</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">0</span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord">0</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">o</span><span class="mord mathnormal">u</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">0</span><span class="mclose">)</span></span></span></span></span></span></p>
+<h2 id="nombre-premiers-dans-les-anneaux">Nombre premiers dans les anneaux</h2>
+<p>Un élément a d’un anneau A est inversible s’il est b∈A tel que<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>a</mi><mi>b</mi><mo>=</mo><mn>1</mn><mo>=</mo><mi>b</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">
+ab = 1 = ba</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathnormal">ab</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathnormal">ba</span></span></span></span></span></span></p>
+<p>Pour les nombre premiers dans Z :<br>
+si a divise p premier ⇒ (a = 1) ou (a = -1) ou (a = p) ou (a = -p).<br>
+⇒ Les nombres premiers sont les éléments inversible dans Z.</p>
+<h2 id="stathme">Stathme</h2>
+<p>On appelle stathme sur (A, +, ×) toute application v: A* → N tel que :</p>
+<ul>
+<li>∀ a, b∈A, v(a) ≤ v(ab)</li>
+<li>∀ a∈A, ∀ b∈A*, ∃q, r∈A,  tel que a = bq + r avec r = 0<br>
+ou v® &lt; v(b)</li>
+</ul>
+<p><em>Le stathme sur Z c’est la valeur absolue.</em></p>
+</div>
+</body>
+
+</html>
