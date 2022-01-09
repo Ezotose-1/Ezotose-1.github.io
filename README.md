@@ -5,3 +5,5 @@
   [https://ezotose-1.github.io/Epita/masi.html](https://ezotose-1.github.io/Epita/masi.html)
 * Cours de RESEAU :
   [https://ezotose-1.github.io/Epita/reseau.html](https://ezotose-1.github.io/Epita/reseau.html)
+* Cours de THL :
+  [https://ezotose-1.github.io/Epita/thl.html](https://ezotose-1.github.io/Epita/thl.html)

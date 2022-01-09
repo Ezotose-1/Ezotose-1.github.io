@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>thl</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="théorie-des-langages">Théorie des Langages</h1>
+<h2 id="classification-des-grammaires">Classification des grammaires</h2>
+<p>Hiérarchie de <strong>Chomsky</strong> sur les grammaires en fonctions des caractéristiques de ces dernières</p>
+<p><em>(NB: Pour les exemples suivants, chaque lettre de l’alphabet Français représente des éléments <strong>non terminaux</strong> et inversement pour les lettres grecs)</em></p>
+<h3 id="grammaire-sentence-monotone-">Grammaire <em>Sentence Monotone</em> :</h3>
+<p><span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>α</mi><mo>→</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">
+\alpha → \beta
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span style="margin-right: 0.0037em;" class="mord mathnormal">α</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span style="margin-right: 0.05278em;" class="mord mathnormal">β</span></span></span></span></span></span> avec <span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>α</mi><mi mathvariant="normal">∣</mi><mo>≤</mo><mi mathvariant="normal">∣</mi><mi>β</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex"> |\alpha| \le |\beta|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">∣</span><span style="margin-right: 0.0037em;" class="mord mathnormal">α</span><span class="mord">∣</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">∣</span><span style="margin-right: 0.05278em;" class="mord mathnormal">β</span><span class="mord">∣</span></span></span></span></span></span></p>
+<h3 id="grammaire-context-sensitive-">Grammaire <em>Context-Sensitive</em> :</h3>
+<p><span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>α</mi><mi>A</mi><mi>β</mi><mo>→</mo><mi>α</mi><mi>γ</mi><mi>β</mi><mspace linebreak="newline"></mspace><mo stretchy="false">(</mo><mi>γ</mi><mo mathvariant="normal">≠</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">
+\alpha A\beta → \alpha \gamma\beta \\
+(\gamma ≠ \epsilon)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span style="margin-right: 0.0037em;" class="mord mathnormal">α</span><span class="mord mathnormal">A</span><span style="margin-right: 0.05278em;" class="mord mathnormal">β</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span style="margin-right: 0.0037em;" class="mord mathnormal">α</span><span style="margin-right: 0.05556em;" class="mord mathnormal">γ</span><span style="margin-right: 0.05278em;" class="mord mathnormal">β</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">(</span><span style="margin-right: 0.05556em;" class="mord mathnormal">γ</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathnormal">ϵ</span><span class="mclose">)</span></span></span></span></span></span> Toute règle comprend un non-terminal entouré de deux mots qui décrivent le <em>contexte</em> dans lequel la variable peut être remplacée.</p>
+<h3 id="grammaire-hors-context-">Grammaire <em>Hors-Context</em> :</h3>
+<p><span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mo>→</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">
+A → \alpha
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span style="margin-right: 0.0037em;" class="mord mathnormal">α</span></span></span></span></span></span> où A est un symbole non terminal et α est une chaîne composée de terminaux et/ou de non-terminaux. En clair, la partie gauche est composé que d’un élément.</p>
+<h3 id="grammaire-linéaire-gauchedroite-">Grammaire <em>Linéaire Gauche/Droite</em> :</h3>
+<p><strong>Droite :</strong><br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mo>→</mo><mi>α</mi><mi>B</mi><mspace linebreak="newline"></mspace><mi>B</mi><mo>→</mo><mi>β</mi><mi>C</mi><mspace linebreak="newline"></mspace><mi>C</mi><mo>→</mo><mi>γ</mi></mrow><annotation encoding="application/x-tex">
+A → \alpha B \\
+B → \beta C \\
+C → \gamma
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span style="margin-right: 0.0037em;" class="mord mathnormal">α</span><span style="margin-right: 0.05017em;" class="mord mathnormal">B</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span style="margin-right: 0.05017em;" class="mord mathnormal">B</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span style="margin-right: 0.07153em;" class="mord mathnormal">βC</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span style="margin-right: 0.07153em;" class="mord mathnormal">C</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.19444em;"></span><span style="margin-right: 0.05556em;" class="mord mathnormal">γ</span></span></span></span></span></span> Ainsi tous les éléments non terminaux sont du coté droit (ou respectivement gauche).</p>
+<h3 id="classification">Classification</h3>
+<p>Ainsi Chomsky classe les grammaires comme cela :</p>
+<ul>
+<li><strong>TYPE 0</strong> → Aucun contrainte</li>
+<li><strong>TYPE 1</strong> → Monotone / Context-Sensitive</li>
+<li><strong>TYPE 2</strong> → Hors Contexte</li>
+<li><strong>TYPE 3</strong> → Linéaire</li>
+</ul>
+</div>
+</body>
+
+</html>
