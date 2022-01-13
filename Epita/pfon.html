@@ -88,6 +88,23 @@ Faire la somme de tous les entiers d’une liste se fait via ce motif en appelan
 <span class="token comment">-- Filtrage, n == 3</span>
 <span class="token punctuation">[</span> <span class="token number">2</span><span class="token operator">*</span><span class="token hvariable">n</span>		<span class="token operator">|</span> <span class="token hvariable">n</span> <span class="token operator">&lt;-</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token hvariable">n</span> <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">]</span>  <span class="token comment">-- [6]</span>
 </code></pre>
+<h2 id="retour-fonctionnels">Retour Fonctionnels</h2>
+<p>De même que l’appelle de fonction en argument est possible dans ce paradigme, on peut donner en valeur de retour une fonction à une autre.<br>
+<strong>Exemple :</strong><br>
+La fonction <em>+/-</em> permet de retourner la fonction + ou - en fonction du prédicat donné :</p>
+<pre class=" language-py"><code class="prism  language-py"><span class="token punctuation">(</span>defun <span class="token operator">+</span><span class="token operator">/</span><span class="token operator">-</span> <span class="token punctuation">(</span>is_plus<span class="token punctuation">)</span>
+	<span class="token keyword">if</span> is_plus <span class="token comment">#'+ #'-))</span>
+</code></pre>
+<p>On peut ainsi faire du <strong>retour anonyme</strong>. Cela accentue l’expressivité du paradigme.</p>
+<p>Cette fonction retourner la composition de f sur l’ensemble des arguments placés dans un <em>rest</em> et appliquer <em>not</em> sur le résultat.</p>
+<pre class=" language-py"><code class="prism  language-py"><span class="token punctuation">(</span>defun complement <span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+	<span class="token punctuation">(</span><span class="token keyword">lambda</span> <span class="token punctuation">(</span><span class="token operator">&amp;</span>rest args<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">not</span> <span class="token punctuation">(</span><span class="token builtin">apply</span> f args<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Autre exemple classique, les additionneurs :</p>
+<pre class=" language-py"><code class="prism  language-py"><span class="token punctuation">(</span>defun adder <span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+	<span class="token punctuation">(</span><span class="token keyword">lambda</span> <span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">+</span> x n<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">## (funcall (adder 3) 1) ⇒ 4</span>
+</code></pre>
 </div>
 </body>
 
