@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pfon</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="programmation-fonctionnelles">Programmation Fonctionnelles</h1>
+<p>Objet de premier classe (ou d’ordre supérieur) → Pouvoir utiliser un objet comme tous les autres dans le langage.</p>
+<h2 id="lordre-supérieur">L’ordre supérieur</h2>
+<p>Les fonctions sont des objets de premier ordre :<br>
+⇒ Nommage ou Renommage<br>
+⇒ Affectation <em>(les fonctions peuvent être arguments/valeur de retour)</em><br>
+Expressivité supérieure, code plus concis…<br>
+On peut <em>(ré)</em> affecter des fonctions comme si c’était des variables<br>
+<strong>Approche <em>“classique”</em>  :</strong></p>
+<pre class=" language-haskell"><code class="prism  language-haskell"><span class="token hvariable">backwards</span> <span class="token operator">::</span> <span class="token punctuation">[</span><span class="token hvariable">a</span><span class="token punctuation">]</span> <span class="token operator">-&gt;</span> <span class="token punctuation">[</span><span class="token hvariable">a</span><span class="token punctuation">]</span>
+<span class="token hvariable">backwards</span> <span class="token hvariable">xs</span> <span class="token operator">=</span> <span class="token builtin">reverse</span> <span class="token hvariable">xs</span>
+<span class="token comment">-- backwards function call reverse function</span>
+</code></pre>
+<p><strong>En ordre supérieur :</strong></p>
+<pre class=" language-haskell"><code class="prism  language-haskell"><span class="token hvariable">backwards</span> <span class="token operator">::</span> <span class="token punctuation">[</span><span class="token hvariable">a</span><span class="token punctuation">]</span> <span class="token operator">-&gt;</span> <span class="token punctuation">[</span><span class="token hvariable">a</span><span class="token punctuation">]</span>
+<span class="token hvariable">backwards</span> <span class="token operator">=</span> <span class="token builtin">reverse</span>
+<span class="token comment">-- backwards function is now as reverse function</span>
+</code></pre>
+<p>Les fonctions peuvent être gérées localement avec les balises <code>let</code> <code>in</code> ou <code>where</code> comme si on manipulait des variables.</p>
+<h2 id="fonctions-anonymes-λ-fonctions">Fonctions anonymes (λ fonctions)</h2>
+<p>Fondement des langages fonctionnelles. Objet naturelle dans les autres paradigmes mais pas sous forme de fonction.<br>
+λ-fonction, c’est une fonction qui n’a pas de nom mais qui peut être utilisé.<br>
+On peut définir des objets <code>return 3</code> ici 3 est une variable anonyme. En programmation fonctionnelle ce principe existe pour les fonctions.</p>
+<pre class=" language-py"><code class="prism  language-py"><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> <span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">*</span> <span class="token number">2</span> x<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token comment"># Ici la lambda expression est appelée avec 4 en argument.</span>
+</code></pre>
+<h2 id="arguments-fonctionnelle">Arguments Fonctionnelle</h2>
+<p>→ Cœur  des λ-calcul.<br>
+Donner une fonction en argument à une autre.<br>
+Exemple en Lisp :</p>
+<pre class=" language-py"><code class="prism  language-py"><span class="token punctuation">(</span><span class="token builtin">apply</span> <span class="token comment">#'+ '(1 2 3 4 5))</span>
+</code></pre>
+<p>Applique la fonction plus <em>+</em> sur la liste <em>(1 2 3 4 5)</em>. Ainsi la fonction Apply prends en arguent une fonction en premier argument puis ceux sur quoi on veut l’appliquer.</p>
+<h3 id="motif-1--mapping">Motif 1 : Mapping</h3>
+<p><strong>Définition :</strong> Traiter tous les éléments d’une liste par une fonction et de récupérer la liste correspondante.</p>
+<p><strong>Exemples :</strong><br>
+Appelle à la fonction double sur une liste va renvoyer une liste avec tous les éléments de la première *2</p>
+<pre class=" language-haskell"><code class="prism  language-haskell"><span class="token hvariable">db1</span> <span class="token operator">::</span> <span class="token punctuation">[</span><span class="token constant">Int</span><span class="token punctuation">]</span> <span class="token operator">-&gt;</span> <span class="token punctuation">[</span><span class="token constant">Int</span><span class="token punctuation">]</span>
+<span class="token hvariable">db1</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token hvariable">db1</span> <span class="token punctuation">(</span><span class="token hvariable">x</span><span class="token operator">:</span><span class="token hvariable">xs</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span><span class="token hvariable">x</span> <span class="token operator">:</span> <span class="token hvariable">db1</span> <span class="token hvariable">xs</span>
+<span class="token comment">-- Double du premier ajouté à la recursion de la suite</span>
+</code></pre>
+<p>Ainsi on pourrait changer cette fonction pour la généraliser en ajoutant à son appelle la fonction qu’on veut mapper (ici la fonction double).<br>
+Ainsi on aurait :</p>
+<pre class=" language-haskell"><code class="prism  language-haskell"><span class="token hvariable">db1</span> <span class="token operator">::</span> <span class="token punctuation">[</span><span class="token constant">Int</span><span class="token punctuation">]</span> <span class="token operator">-&gt;</span> <span class="token punctuation">[</span><span class="token constant">Int</span><span class="token punctuation">]</span>
+<span class="token hvariable">db1</span> <span class="token operator">=</span> <span class="token builtin">map</span> <span class="token punctuation">(</span><span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment">-- lambda expression </span>
+</code></pre>
+<hr>
+<h3 id="motif-2--filtrage">Motif 2 : Filtrage</h3>
+<p><strong>Définition :</strong> On conserve ou supprime les éléments d’une liste en fonction d’un prédicat <em>(fonction booléenne)</em> donné en argument.</p>
+<p><strong>Exemple :</strong><br>
+Fonction en haskell qui va conserver uniquement les nombres positifs de la liste.</p>
+<pre class=" language-haskell"><code class="prism  language-haskell"><span class="token hvariable">pst</span> <span class="token operator">::</span> <span class="token punctuation">[</span><span class="token hvariable">int</span><span class="token punctuation">]</span> <span class="token operator">-&gt;</span> <span class="token punctuation">[</span><span class="token hvariable">int</span><span class="token punctuation">]</span>
+<span class="token hvariable">pst</span> <span class="token operator">=</span> <span class="token builtin">filter</span> <span class="token punctuation">(</span><span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h3 id="motif-3--folding--réduction">Motif 3 : Folding / Réduction</h3>
+<p><strong>Définition :</strong> On combine via une fonction les éléments deux à deux pour finalement qu’il n’en reste qu’un.<br>
+<strong>Exemple :</strong><br>
+Faire la somme de tous les entiers d’une liste se fait via ce motif en appelant la fonction <em>plus</em>.</p>
+<pre class=" language-haskell"><code class="prism  language-haskell"><span class="token hvariable">lstsum</span> <span class="token operator">::</span> <span class="token punctuation">[</span><span class="token hvariable">int</span><span class="token punctuation">]</span> <span class="token operator">-&gt;</span> <span class="token punctuation">[</span><span class="token hvariable">int</span><span class="token punctuation">]</span>
+<span class="token hvariable">lstsum</span> <span class="token operator">=</span> <span class="token builtin">foldr1</span> <span class="token punctuation">(</span><span class="token operator">+</span><span class="token punctuation">)</span>
+</code></pre>
+<p>On a le <strong>folding généralisé</strong> qui permet de définir une valeur par défaut en cas de liste vide.</p>
+<h3 id="exemple-concret-des-motifs-">Exemple concret des motifs :</h3>
+<p>Création de la fonction ssq (somme de tous les carrés de 1 à n) en fonctionnel :</p>
+<pre class=" language-haskell"><code class="prism  language-haskell"><span class="token hvariable">ssq</span> <span class="token operator">::</span> <span class="token punctuation">[</span><span class="token hvariable">int</span><span class="token punctuation">]</span> <span class="token operator">-&gt;</span> <span class="token punctuation">[</span><span class="token hvariable">int</span><span class="token punctuation">]</span>
+<span class="token hvariable">ssq</span> <span class="token operator">=</span> <span class="token builtin">foldr1</span> <span class="token punctuation">(</span><span class="token operator">+</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">map</span> <span class="token punctuation">(</span><span class="token operator">\</span><span class="token hvariable">x</span> <span class="token operator">-&gt;</span> <span class="token hvariable">x</span> <span class="token operator">*</span> <span class="token hvariable">x</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">...</span><span class="token hvariable">n</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="compréhenseurs-de-liste-haskell">Compréhenseurs de liste <em>(Haskell)</em></h3>
+<p><strong>Définition :</strong> Combinaison d’un filtrage et d’un mapping.<br>
+⇒ Je filtre tous les éléments qui valide le prédicat donné puis sur tous ces éléments je fais un mapping de la fonction donnée.</p>
+<pre class=" language-haskell"><code class="prism  language-haskell"><span class="token comment">-- Pas de filtrage donné</span>
+<span class="token punctuation">[</span> <span class="token number">2</span><span class="token operator">*</span><span class="token hvariable">n</span>		<span class="token operator">|</span> <span class="token hvariable">n</span> <span class="token operator">&lt;-</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span> <span class="token punctuation">]</span>  	   <span class="token comment">-- [4, 6, 8]</span>
+<span class="token punctuation">[</span> <span class="token hvariable">n</span> <span class="token operator">==</span> <span class="token number">3</span>	<span class="token operator">|</span> <span class="token hvariable">n</span> <span class="token operator">&lt;-</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span> <span class="token punctuation">]</span>	   <span class="token comment">-- [False, True, False]</span>
+
+<span class="token comment">-- Filtrage, n == 3</span>
+<span class="token punctuation">[</span> <span class="token number">2</span><span class="token operator">*</span><span class="token hvariable">n</span>		<span class="token operator">|</span> <span class="token hvariable">n</span> <span class="token operator">&lt;-</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token hvariable">n</span> <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">]</span>  <span class="token comment">-- [6]</span>
+</code></pre>
+</div>
+</body>
+
+</html>
